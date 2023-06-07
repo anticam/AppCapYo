@@ -1,0 +1,33 @@
+{
+    "xsappname": "AppCapYo",
+    "tenant-mode": "dedicated",
+    "scopes": [
+        {
+            "name": "uaa.user",
+            "description": "UAA"
+        },
+        {
+            "name": "$XSAPPNAME.Jobs",
+            "description": "SAP Job Scheduling service Scope",
+            "grant-as-authority-to-apps": [
+                "$XSSERVICENAME(my-jobscheduler)"
+            ]
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "Token_Exchange",
+            "description": "UAA Token Exchange",
+            "scope-references": [
+                "uaa.user"
+            ]
+        }
+    ]
+    ,
+    "oauth2-configuration": {
+        "token-validity": 3600,
+        "redirect-uris": [
+            "https://*-AppCapYo-app.cfapps.*.hana.ondemand.com/login/callback"
+        ]
+    }
+}
