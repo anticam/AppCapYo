@@ -5,28 +5,28 @@
   "license": "UNLICENSED",
   "description": "Business Application",
   "engines": {
-    "node": "^16"
+    "node": "^20"
   },
   "dependencies": {
-    "@sap/cds": "^6.8",
-    "@sap/audit-logging": "^5",
+    "@sap/cds": "^7",
+    "@sap/audit-logging": "^6",
     "hdb": "^0.19",
 
-    "@sap/xsenv": "^3",
+    "@sap/xsenv": "^5",
     "@sap/xssec": "^3",
-    "passport": "^0.4.1",
+    "passport": "^0.7.0",
 
     "debug": "^4.3",
     "express": "^4"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.96.4"
+    "@sap/ux-specification": "^1.120.9"
   },
   "sapux": [
     "app/fiori"
   ],
   "scripts": {
-    "start": "cds run"
+    "start": "cds-serve"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
